@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.15">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/usernameTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -63,7 +63,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/phoneTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -72,16 +72,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="20/20/2018"
-            android:textColor="#F7F3F3"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/emailTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -150,5 +141,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.94" />
+
+    <Button
+        android:id="@+id/encry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="encry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addHomeContact"
+        app:layout_constraintVertical_bias="0.39" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

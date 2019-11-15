@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home"
+
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".LoginPinActivity">
@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintVertical_bias="0.254" />
 
     <TextView
         android:id="@+id/textView16"
@@ -29,7 +29,7 @@
         android:padding="0dp"
         android:text="Smart Phone Book"
         android:textAlignment="center"
-        android:textColor="#F0EAEA"
+        android:textColor="#063F6D"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,14 +45,14 @@
         android:ems="10"
         android:hint="Enter the Pin Here"
         android:inputType="numberPassword"
-        android:textColor="#F7F7F8"
-        android:textColorHint="#FAFAFC"
+        android:textColor="#0D0D0E"
+        android:textColorHint="#A8A8B6"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.427" />
+        app:layout_constraintVertical_bias="0.485" />
 
     <Button
         android:id="@+id/userPinSubmitBtn"
@@ -64,7 +64,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintVertical_bias="0.657" />
 
     <ProgressBar
         android:id="@+id/pinprogressBar"
@@ -76,6 +76,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintVertical_bias="0.661" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

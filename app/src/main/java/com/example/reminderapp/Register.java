@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.reminderapp.helpers.CollectionNames;
+import com.example.reminderapp.models.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -78,12 +79,19 @@ public class Register extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Map<String, Object> userdata = new HashMap<>();
-                                    userdata.put("username", user1);
-                                    userdata.put("email", email1);
-                                    userdata.put("password", pass1);
-                                    userdata.put("loginPin", pin1);
-                                    userdata.put("phone", phone1);
+//                                    Map<String, Object> userdata = new HashMap<>();
+//                                    userdata.put("username", user1);
+//                                    userdata.put("email", email1);
+//                                    userdata.put("password", pass1);
+//                                    userdata.put("loginPin", pin1);
+//                                    userdata.put("phone", phone1);
+
+                                    Users userdata = new Users();
+                                    userdata.setUsername(user1);
+                                    userdata.setEmail(email1);
+                                    userdata.setPassword(pass1);
+                                    userdata.setLoginPin(pin1);
+                                    userdata.setPhone(phone1);
 
 
                                     firebaseFirestore.collection(new CollectionNames().getUsersCollection())

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginPinActivity"></activity>
+        <activity android:name=".encry"></activity>
+        <activity android:name=".LoginPinActivity" />
         <activity android:name=".noteedit" />
         <activity android:name=".Note" />
         <activity android:name=".home" />

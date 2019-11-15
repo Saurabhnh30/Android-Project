@@ -4,27 +4,48 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.reminderapp.helpers.CollectionNames;
+import com.example.reminderapp.models.Users;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.time.Instant;
 
 public class home extends AppCompatActivity
 {
     FirebaseAuth firebaseAuth;
+    FirebaseFirestore firestore;
 
-    Button rmd;
-    Button addnote;
-    Button logout;
+    Button rmd, addnote, logout ,encry ;
+    TextView usernameTV, emailTV, phoneTV;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        firestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
 
+        usernameTV = findViewById(R.id.usernameTV);
+        phoneTV = findViewById(R.id.phoneTV);
+        emailTV = findViewById(R.id.emailTV);
+        encry = findViewById(R.id.encry);
+
         logout = findViewById(R.id.logout);
+
+        getLoggedInUserData();
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,5 +72,28 @@ public class home extends AppCompatActivity
                 startActivity(b);
             }
         });
+
+        encry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent c = new Intent(home.this, encry.class);
+                startActivity(c);
+
+            }
+        });
+    }
+
+
+    public void getLoggedInUserData() {
+        firestore.collection(new CollectionNames().getUsersCollection()).document(firebaseAuth.getCurrentUser().getUid())
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        usernameTV.setText(task.getResult().getString(Users.USERNAME));
+                        emailTV.setText(task.getResult().getString(Users.EMAIL));
+                        phoneTV.setText(task.getResult().getString(Users.PHONE));
+                    }
+                });
     }
 }

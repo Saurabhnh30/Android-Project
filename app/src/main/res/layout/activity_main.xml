@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/home">
+  >
 
 
     <TextView
@@ -18,7 +18,7 @@
         android:layout_alignParentBottom="true"
         android:fontFamily="cursive"
         android:text="Smart Phone Book"
-        android:textColor="#F3F7F3"
+        android:textColor="#063F6D"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
         android:fontFamily="cursive"
         android:text="Login"
         android:textAlignment="center"
-        android:textColor="#F3F7F3"
+        android:textColor="#063F6D"
         android:textSize="35dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,8 +75,8 @@
         android:fontFamily="monospace"
         android:hint="Username"
         android:inputType="textPersonName"
-        android:textColor="#FAF8F8"
-        android:textColorHint="#F7F6FA"
+        android:textColor="#063F6D"
+        android:textColorHint="#ACA7A7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,8 +94,8 @@
         android:fontFamily="monospace"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="#F4F5F8"
-        android:textColorHint="#F7F6FA"
+        android:textColor="#063F6D"
+        android:textColorHint="#ACA7A7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
@@ -117,7 +117,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.681" />
+        app:layout_constraintVertical_bias="0.694" />
 
     <ProgressBar
         android:id="@+id/loginPrograssbar"
@@ -142,10 +142,10 @@
         android:layout_below="@id/loginSubmitButton"
         android:text="New User, Click here to register"
         android:textAlignment="center"
-        android:textColor="#F6F2F7"
+        android:textColor="#063F6D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768"
+        app:layout_constraintVertical_bias="0.811"
         tools:layout_editor_absoluteX="0dp" />
 
 
