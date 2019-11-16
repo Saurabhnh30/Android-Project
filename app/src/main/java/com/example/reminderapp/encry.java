@@ -63,17 +63,6 @@ public class encry extends AppCompatActivity
         decryptbutton = findViewById(R.id.decryptbutton);
 
 
-//        try
-//        {
-//            Map<String , Object> keymap = rsa.initKey();
-//            publickey =  rsa.getPublicKey(keymap);
-//            privatekey = rsa.getPrivateKey(keymap);
-//
-//        }
-//        catch (Exception e)
-//        {
-//            e.printStackTrace();
-//        }
 
 
         try {
