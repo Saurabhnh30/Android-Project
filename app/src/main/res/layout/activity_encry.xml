@@ -36,7 +36,7 @@
             android:id="@+id/decrypttitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:hint="Enter the data" />
 
         <Button
             android:id="@+id/decryptbutton"
