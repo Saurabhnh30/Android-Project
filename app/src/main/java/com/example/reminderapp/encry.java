@@ -122,6 +122,7 @@ public class encry extends AppCompatActivity
 
     }
 
+    // --
     public void deceypt(View view)
     {
 
