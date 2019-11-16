@@ -98,34 +98,11 @@ public class encry extends AppCompatActivity
     public void encrypt(View view)
     {
 
-//        byte[] rsaData = encrypttitle.getText().toString().getBytes();
-//
-//        try {
-//            encodeData = rsa.encryptByPublicKey(rsaData,publickey);
-//            String encodeStr = new BigInteger(1, encodeData).toString();
-//
-//            HashMap<String, Object> data = new HashMap<>();
-//            data.put("title", encodeStr);
-//
-//            firestore.collection("encrypt").add(data)
-//                    .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<DocumentReference> task) {
-//                            Toast.makeText(
-//                                    encry.this,
-//                                    "Saved to firestore",
-//                                    Toast.LENGTH_LONG
-//                            ).show();
-//                        }
-//                    });
-//        }
-//        catch (Exception e) {
-//            e.printStackTrace();
-//        }
+
 
         String s = AESEncryptionMethod(encrypttitle.getText().toString());
         Log.d("MAIN_ACT_LOG", "encrypted data : " + s);
-//        databaseReference.child(Long.toString(date.getTime())).setValue(s);
+
         encrypttitle.setText("");
 
         HashMap<String, Object> data = new HashMap<>();
