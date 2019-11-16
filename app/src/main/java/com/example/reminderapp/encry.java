@@ -3,6 +3,7 @@ package com.example.reminderapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +39,7 @@ public class encry extends AppCompatActivity
 
     EditText encrypttitle;
     TextView decrypttitle;
-    Button encryptbutton, decryptbutton;
+    Button encryptbutton, decryptbutton , next;
     List<Byte> ed = new ArrayList<Byte>();
 
     private String publickey = " " ;
@@ -61,6 +62,7 @@ public class encry extends AppCompatActivity
         encryptbutton = findViewById(R.id.encryptbutton);
         decrypttitle = findViewById(R.id.decrypttitle);
         decryptbutton = findViewById(R.id.decryptbutton);
+        next = findViewById(R.id.next);
 
         try {
             try {
@@ -77,6 +79,14 @@ public class encry extends AppCompatActivity
         catch (Exception e) {
             e.printStackTrace();
         }
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(encry.this,EncryptScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -125,6 +135,8 @@ public class encry extends AppCompatActivity
                     }
                 });
 
+
+
     }
 
 
@@ -153,6 +165,8 @@ public class encry extends AppCompatActivity
         }
         return returnString;
     }
+
+
 
     private String AESDecryptionMethod(String string) throws UnsupportedEncodingException {
         byte[] EncryptedByte = string.getBytes("ISO-8859-1");
