@@ -9,5 +9,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/encryptview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#C2C1C1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
