@@ -49,7 +49,7 @@ public class AdapterEncrypt extends RecyclerView.Adapter<AdapterEncrypt.EncryVie
         {
             super(itemView);
             encrytitle = itemView.findViewById(R.id.encrytitle);
-            encrydata =  itemView.findViewById(R.id.encrydata);
+//            encrydata =  itemView.findViewById(R.id.encrydata);
         }
     }
 }

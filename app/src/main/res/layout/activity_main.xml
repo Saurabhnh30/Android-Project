@@ -105,8 +105,8 @@
 
     <Button
         android:id="@+id/loginSubmitButton"
-        android:layout_width="182dp"
-        android:layout_height="77dp"
+        android:layout_width="116dp"
+        android:layout_height="60dp"
         android:layout_below="@id/loginpasswordEditText"
         android:layout_centerHorizontal="true"
         android:background="@drawable/login"

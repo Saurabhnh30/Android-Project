@@ -6,9 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".EncryptScreen">
 
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="257dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="cursive"
+        android:text="Encrypt your Data"
+        android:textColor="#0A0A0A"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/encryptview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#C2C1C1" />
+        android:layout_width="405dp"
+        android:layout_height="556dp"
+        android:background="#C2C1C1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <Button
+        android:id="@+id/encryptadddatabutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.912"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 </androidx.constraintlayout.widget.ConstraintLayout>

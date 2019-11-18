@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Note"
-    android:background="@drawable/loginscreen">
+    >
 
     <TextView
         android:id="@+id/textView7"
@@ -17,7 +17,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="cursive"
         android:text="Smart Phone Book "
-        android:textColor="#FFFFFF"
+        android:textColor="#161616"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click here to ADD"
-        android:textColor="#E8EDF1"
+        android:textColor="#161616"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.734"

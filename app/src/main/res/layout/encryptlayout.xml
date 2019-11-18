@@ -34,15 +34,6 @@
             android:textColor="#070707"
             android:textSize="30sp" />
 
-        <TextView
-            android:id="@+id/encrydata"
-            android:layout_width="364dp"
-            android:layout_height="wrap_content"
-            android:gravity="center|left"
-            android:hint="Data"
-            android:textColor="#070707"
-            android:textSize="24sp" />
-
         <Button
             android:id="@+id/encryptdelete"
             android:layout_width="174dp"

@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,7 +33,7 @@ import javax.crypto.spec.SecretKeySpec;
 public class EncryptScreen extends AppCompatActivity
 {
     FirebaseFirestore firestore;
-
+    Button encryptadddatabutton;
     RecyclerView recyclerView;
 
     private byte encryptionKey[] = {9, 115, 51, 86, 105, 4, -31, -23, -68, 88, 17, 20, 3, -105, 119, -53};
@@ -44,6 +47,15 @@ public class EncryptScreen extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encrypt_screen);
+
+        encryptadddatabutton = findViewById(R.id.encryptadddatabutton);
+        encryptadddatabutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EncryptScreen.this , encry.class);
+                startActivity(intent);
+            }
+        });
 
         firestore = FirebaseFirestore.getInstance();
 

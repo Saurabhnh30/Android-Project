@@ -24,7 +24,7 @@ public class home extends AppCompatActivity
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firestore;
 
-    Button rmd, addnote, logout ,encry ;
+    Button rmd, addnote, logout ,encry, update;
     TextView usernameTV, emailTV, phoneTV;
 
 
@@ -45,6 +45,8 @@ public class home extends AppCompatActivity
         logout = findViewById(R.id.logout);
 
         getLoggedInUserData();
+
+
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,9 +78,18 @@ public class home extends AppCompatActivity
         encry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent c = new Intent(home.this, encry.class);
+                Intent c = new Intent(home.this, EncryptScreen.class);
                 startActivity(c);
 
+            }
+        });
+
+        update = findViewById(R.id.Update);
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent d = new Intent(home.this,Updateprofile.class);
+                startActivity(d);
             }
         });
     }

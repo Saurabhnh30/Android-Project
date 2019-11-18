@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="@drawable/signupscreen"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="25dp"
@@ -16,7 +15,7 @@
         android:layout_gravity="center"
         android:fontFamily="cursive"
         android:text="Add the Remainder"
-        android:textColor="#F3F4F5"
+        android:textColor="#0C0C0C"
         android:textSize="30sp"
         android:textStyle="bold" />
 
@@ -35,8 +34,8 @@
             android:fontFamily="casual"
             android:gravity="center"
             android:hint="Date And Time"
-            android:textColor="#F3F4F5"
-            android:textColorHint="#F8F8F8"
+            android:textColor="#141313"
+            android:textColorHint="#0D0D0E"
             android:textStyle="bold" />
 
         <Button
@@ -60,8 +59,8 @@
         android:fontFamily="casual"
         android:gravity="center"
         android:hint="Message"
-        android:textColor="#F3F4F5"
-        android:textColorHint="#F8F8F8"
+        android:textColor="#141313"
+        android:textColorHint="#070707"
         android:textStyle="bold" />
 
     <Button

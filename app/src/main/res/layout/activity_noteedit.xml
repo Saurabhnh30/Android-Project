@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".noteedit"
-    android:background="@drawable/loginscreen">
+   >
 
     <TextView
         android:id="@+id/textView5"
@@ -18,15 +18,15 @@
         android:fontFamily="cursive"
         android:gravity="center"
         android:text="Smart Phone Book "
-        android:textColor="#F6F8F8"
+        android:textColor="#050505"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.618"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
         android:id="@+id/textView8"
@@ -39,7 +39,7 @@
         android:fontFamily="cursive"
         android:gravity="center"
         android:text="Now you can add and mote note"
-        android:textColor="#F6F8F8"
+        android:textColor="#050505"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,8 +83,8 @@
         android:gravity="center"
         android:hint="Enter the Title"
         android:inputType="textPersonName"
-        android:textColor="#F6F8FA"
-        android:textColorHint="#F2F3F7"
+        android:textColor="#050505"
+        android:textColorHint="#7E7D7D"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,8 +103,8 @@
         android:gravity="center"
         android:hint="Enter the Details"
         android:inputType="textPersonName"
-        android:textColor="#F6F8FA"
-        android:textColorHint="#F2F3F7"
+        android:textColor="#050505"
+        android:textColorHint="#7E7D7D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.632"
@@ -118,7 +118,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="cursive"
         android:text="click here to add note"
-        android:textColor="#F6F6FA"
+        android:textColor="#050505"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

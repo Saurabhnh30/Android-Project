@@ -6,50 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".encry">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="1dp"
-        android:gravity="center"
-        android:orientation="vertical"
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="366dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="cursive"
+        android:text="Smart Phone Book "
+        android:textColor="#0A0A0A"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="257dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="cursive"
+        android:text="Encrypt your Data"
+        android:textColor="#0A0A0A"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
+
+    <EditText
+        android:id="@+id/encrypttitle"
+        android:layout_width="264dp"
+        android:layout_height="109dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <Button
+        android:id="@+id/encryptbutton"
+        android:layout_width="257dp"
+        android:layout_height="47dp"
+        android:onClick="encrypt"
+        android:text="encrypt Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <TextView
+        android:id="@+id/decrypttitle"
+        android:layout_width="279dp"
+        android:layout_height="65dp"
+        android:hint="Enter the data"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545" />
 
-        <EditText
-            android:id="@+id/encrypttitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
+    <Button
+        android:id="@+id/decryptbutton"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
+        android:onClick="deceypt"
+        android:text="SHOW "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.651" />
 
-        <Button
-            android:id="@+id/encryptbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="encrypt"
-            android:text="encrypt Data" />
+    <Button
+        android:id="@+id/next"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:text="List of notes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
 
-        <TextView
-            android:id="@+id/decrypttitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter the data" />
 
-        <Button
-            android:id="@+id/decryptbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="deceypt"
-            android:text="decrypt" />
-
-        <Button
-            android:id="@+id/next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
