@@ -24,7 +24,7 @@ public class home extends AppCompatActivity
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firestore;
 
-    Button rmd, addnote, logout ,encry, update;
+    Button rmd, addnote, logout ,encry, update , docbutton;
     TextView usernameTV, emailTV, phoneTV;
 
 
@@ -90,6 +90,16 @@ public class home extends AppCompatActivity
             public void onClick(View view) {
                 Intent d = new Intent(home.this,Updateprofile.class);
                 startActivity(d);
+            }
+        });
+
+
+        docbutton =  findViewById(R.id.docbutton);
+        docbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent e = new Intent(home.this ,Documentpage.class);
+                startActivity(e);
             }
         });
     }

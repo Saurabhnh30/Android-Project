@@ -1,5 +1,7 @@
 package com.example.reminderapp.models;
 
+import java.util.List;
+
 public class Users {
 
     public static final String USERNAME = "username";
@@ -17,21 +19,6 @@ public class Users {
 
 
     public Users() {}
-
-
-    public Users(
-            String email,
-            String password,
-            String username,
-            String pin,
-            String phone
-    ) {
-        this.username = username;
-        this.email = email;
-        this.phone = phone;
-        this.loginPin = pin;
-        this.password = password;
-    }
 
 
     public String getUsername() {

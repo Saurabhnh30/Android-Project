@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Documentpage">
+
+    <ImageView
+        android:id="@+id/noteImageIV"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:maxHeight="100dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/getImageFromGalleryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="select image from gallery" />
+
+    <EditText
+        android:id="@+id/aboutImageTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="about image"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/submitImageNoteBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="submit" />
+
+    <ProgressBar
+        android:id="@+id/imgUploadProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/goToDocListActivityBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+</LinearLayout>
