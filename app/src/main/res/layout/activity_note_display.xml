@@ -53,10 +53,12 @@
                     android:text="TextView" />
 
                 <ImageView
-                    android:id="@+id/docDisplayImageView"
+                    android:id="@+id/docImageView"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="150dp"
+                    android:visibility="gone"
                     tools:srcCompat="@tools:sample/avatars" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

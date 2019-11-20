@@ -85,6 +85,20 @@ public class EncryptScreen extends AppCompatActivity
     }
 
 
+    public void deleteEncrypt(String id) {
+        firestore.collection("encrypt")
+                .document(id)
+                .delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        getAllData();
+                    }
+                });
+
+    }
+
+
     public void getAllData() {
         firestore.collection("encrypt").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -96,6 +110,7 @@ public class EncryptScreen extends AppCompatActivity
                             HashMap<String, String> items = new HashMap<>();
                             try {
                                 items.put("title", AESDecryptionMethod(doc.getString("title")));
+                                items.put("id", doc.getId());
                             }
                             catch (Exception e) {
                                 e.printStackTrace();
@@ -112,7 +127,31 @@ public class EncryptScreen extends AppCompatActivity
     }
 
 
+    private String AESEncryptionMethod(String string){
 
+        byte[] stringByte = string.getBytes();
+        byte[] encryptedByte = new byte[stringByte.length];
+
+        try {
+            cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
+            encryptedByte = cipher.doFinal(stringByte);
+        } catch (InvalidKeyException e) {
+            e.printStackTrace();
+        } catch (BadPaddingException e) {
+            e.printStackTrace();
+        } catch (IllegalBlockSizeException e) {
+            e.printStackTrace();
+        }
+
+        String returnString = null;
+
+        try {
+            returnString = new String(encryptedByte, "ISO-8859-1");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return returnString;
+    }
 
     private String AESDecryptionMethod(String string) throws UnsupportedEncodingException {
         byte[] EncryptedByte = string.getBytes("ISO-8859-1");

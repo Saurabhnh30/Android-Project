@@ -12,7 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.reminderapp.helpers.CollectionNames;
-import com.example.reminderapp.models.Posts;
+import com.example.reminderapp.models.Notes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -21,8 +21,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class noteedit extends AppCompatActivity
 
@@ -63,10 +61,9 @@ public class noteedit extends AppCompatActivity
                  String addt = addtitle.getText().toString();
                  String addd = adddetalis.getText().toString();
 
-                 Posts postnotes = new Posts();
-                 postnotes.setPosttitle(addt);
-                 postnotes.setPostdetails(addd);
-                 postnotes.setImagesList(new ArrayList<String>());
+                 Notes postnotes = new Notes();
+                 postnotes.setNoteTitle(addt);
+                 postnotes.setNoteDetails(addd);
                  postnotes.setUserId(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
 

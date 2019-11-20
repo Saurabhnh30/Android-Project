@@ -6,7 +6,7 @@
     android:padding="15dp">
 
     <TextView
-        android:id="@+id/posttitle"
+        android:id="@+id/noteTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
@@ -22,7 +22,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/postdetails"
+            android:id="@+id/noteDetails"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:layout_gravity="center"

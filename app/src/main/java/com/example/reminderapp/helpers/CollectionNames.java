@@ -5,6 +5,7 @@ public class CollectionNames {
 
     private String notes = "notes";
     private String usersCollection = "users";
+    private String documentCollection = "documents";
 
 
 
@@ -16,5 +17,9 @@ public class CollectionNames {
 
     public String getUsersCollection() {
         return usersCollection;
+    }
+
+    public String getDocumentCollection() {
+        return documentCollection;
     }
 }

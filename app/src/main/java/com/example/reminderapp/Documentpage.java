@@ -16,7 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.reminderapp.helpers.CollectionNames;
-import com.example.reminderapp.models.Posts;
+import com.example.reminderapp.models.Documents;
+import com.example.reminderapp.models.Notes;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -52,7 +53,7 @@ public class Documentpage extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
         firebaseStorage = FirebaseStorage.getInstance();
-        storageReference = firebaseStorage.getReference("postUploads");
+        storageReference = firebaseStorage.getReference("documentUploads");
 
         noteImageIV = findViewById(R.id.noteImageIV);
         getImageFromGalleryBtn = findViewById(R.id.getImageFromGalleryBtn);
@@ -134,15 +135,12 @@ public class Documentpage extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         Uri downloadedImg = task.getResult();
 
-                        List<String> uploadImgList = new ArrayList<>();
-                        uploadImgList.add(downloadedImg.toString());
+                        Documents docs = new Documents();
+                        docs.setDocTitle(aboutImageTV.getText().toString());
+                        docs.setDocImage(downloadedImg.toString());
+                        docs.setUserId(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
-                        Posts post = new Posts();
-                        post.setAboutImage(aboutImageTV.getText().toString());
-                        post.setImagesList(uploadImgList);
-                        post.setUserId(FirebaseAuth.getInstance().getCurrentUser().getUid());
-
-                        firestore.collection(new CollectionNames().getNotes()).add(post)
+                        firestore.collection(new CollectionNames().getDocumentCollection()).add(docs)
                                 .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                                     @Override
                                     public void onComplete(@NonNull Task<DocumentReference> task) {

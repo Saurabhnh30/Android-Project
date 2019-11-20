@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.squareup.picasso.Picasso;
 
 import java.time.Instant;
 
@@ -26,6 +28,7 @@ public class home extends AppCompatActivity
 
     Button rmd, addnote, logout ,encry, update , docbutton;
     TextView usernameTV, emailTV, phoneTV;
+    ImageView userAvatarHomeActivity;
 
 
     @Override
@@ -41,6 +44,7 @@ public class home extends AppCompatActivity
         phoneTV = findViewById(R.id.phoneTV);
         emailTV = findViewById(R.id.emailTV);
         encry = findViewById(R.id.encry);
+        userAvatarHomeActivity = findViewById(R.id.userAvatarHomeActivity);
 
         logout = findViewById(R.id.logout);
 
@@ -114,6 +118,8 @@ public class home extends AppCompatActivity
                         usernameTV.setText(task.getResult().getString(Users.USERNAME));
                         emailTV.setText(task.getResult().getString(Users.EMAIL));
                         phoneTV.setText(task.getResult().getString(Users.PHONE));
+
+                        Picasso.get().load(task.getResult().getString(Users.USER_AVATAR)).into(userAvatarHomeActivity);
                     }
                 });
     }

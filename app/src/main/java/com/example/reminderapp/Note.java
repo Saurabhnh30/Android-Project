@@ -14,17 +14,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.reminderapp.helpers.CollectionNames;
-import com.example.reminderapp.models.Posts;
+import com.example.reminderapp.models.Notes;
+import com.example.reminderapp.models.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 public class Note extends AppCompatActivity
 {
@@ -34,8 +34,7 @@ public class Note extends AppCompatActivity
 
     NoteAdapter noteAdapter;
 
-    FirebaseFirestore firebaseFirestore;
-    List<Posts> postsStack;
+    FirebaseFirestore firestore;
     CollectionNames collectionNames;
 
     boolean onCreated = true;
@@ -58,8 +57,7 @@ public class Note extends AppCompatActivity
 
         collectionNames = new CollectionNames();
 
-        firebaseFirestore = FirebaseFirestore.getInstance();
-        postsStack = new ArrayList<>();
+        firestore = FirebaseFirestore.getInstance();
 
         btnnote.setOnClickListener(new View.OnClickListener()
         {
@@ -101,38 +99,33 @@ public class Note extends AppCompatActivity
     }
 
     public void loadDataFromFirebase() {
-        if (postsStack.size() > 0) postsStack.clear();
-
-        firebaseFirestore.collection(collectionNames.getNotes()).get()
+        firestore.collection(new CollectionNames().getNotes())
+                .whereEqualTo(Users.USER_ID, FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot doc : task.getResult()) {
-                                Posts posts = new Posts(
-                                        doc.getString("posttitle"),
-                                        doc.getString("postdetails"),
-                                        doc.getId()
-                                );
+                        List<Notes> notesList = new ArrayList<>();
 
-                                postsStack.add(posts);
-                            }
-                            Log.d("NOTE DATA", postsStack.toString());
+                        for (QueryDocumentSnapshot doc : task.getResult()) {
+                            Notes post = new Notes();
+                            post.setNoteTitle(doc.getString(Notes.NOTE_TITLE));
+                            post.setNoteId(doc.getId());
+                            post.setNoteDetails(doc.getString(Notes.NOTE_DETAILS));
 
-                            noteAdapter = new NoteAdapter(Note.this, postsStack);
-
-                            noteProgrssBar.setVisibility(View.GONE);
-                            recyclerView.setVisibility(View.VISIBLE);
-
-                            recyclerView.setAdapter(noteAdapter);
+                            notesList.add(post);
                         }
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d("NOTE DATA ", e.getMessage());
+
+
+                        noteAdapter = new NoteAdapter(Note.this, notesList);
+
+                        noteProgrssBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
+
+                        recyclerView.setAdapter(noteAdapter);
                     }
                 });
+
+
     }
 }

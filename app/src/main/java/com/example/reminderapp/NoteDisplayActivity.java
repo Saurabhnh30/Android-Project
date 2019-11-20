@@ -4,14 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.reminderapp.helpers.CollectionNames;
-import com.example.reminderapp.models.Posts;
+import com.example.reminderapp.models.Documents;
+import com.example.reminderapp.models.Notes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
@@ -22,7 +23,7 @@ public class NoteDisplayActivity extends AppCompatActivity {
     CollectionNames collNames;
 
     TextView docDisplayTitleTV, docDisplayDetailsTV;
-    ImageView docDisplayImageView;
+    ImageView docImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,28 +35,37 @@ public class NoteDisplayActivity extends AppCompatActivity {
 
         docDisplayDetailsTV = findViewById(R.id.docDisplayDetailsTV);
         docDisplayTitleTV = findViewById(R.id.docDisplayTitleTV);
-        docDisplayImageView = findViewById(R.id.docDisplayImageView);
+        docImageView = findViewById(R.id.docImageView);
 
+        if (getIntent().getExtras().getString("posttype").equals("DOC")) {
+            docDisplayDetailsTV.setVisibility(View.GONE);
+            docImageView.setVisibility(View.VISIBLE);
 
-        firestore.collection(collNames.getNotes())
-                .document(getIntent().getStringExtra(Posts.POST_ID))
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        Posts post = task.getResult().toObject(Posts.class);
-
-                        if (post.getPosttitle() == null) {
-                            docDisplayTitleTV.setText(post.getAboutImage());
+            firestore.collection(collNames.getDocumentCollection())
+                    .document(getIntent().getExtras().getString("postid"))
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                            Documents doc = task.getResult().toObject(Documents.class);
+                            docDisplayTitleTV.setText(doc.getDocTitle());
+                            Picasso.get().load(doc.getDocImage()).into(docImageView);
                         }
-                        else {
-                            docDisplayTitleTV.setText(post.getPosttitle());
-                        }
+                    });
+        }
 
-                        if (post.getImagesList().size() > 0) {
-                            Picasso.get().load(post.getImagesList().get(0)).into(docDisplayImageView);
-                        }
-                    }
-                });
+
+//        firestore.collection(collNames.getNotes())
+//                .document(getIntent().getStringExtra(Notes.NOTE_ID))
+//                .get()
+//                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                        Notes note = task.getResult().toObject(Notes.class);
+//
+//                        docDisplayTitleTV.setText(note.getNoteTitle());
+//                        docDisplayDetailsTV.setText(note.getNoteDetails());
+//                    }
+//                });
     }
 }

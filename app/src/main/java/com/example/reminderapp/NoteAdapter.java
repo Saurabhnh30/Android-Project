@@ -1,6 +1,5 @@
 package com.example.reminderapp;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,23 +9,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.reminderapp.helpers.CollectionNames;
-import com.example.reminderapp.models.Posts;
+import com.example.reminderapp.models.Notes;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder> {
 
     Note noteActivity;
-    List<Posts> postsStack;
+    List<Notes> notesList;
 
-    public NoteAdapter(Note note, List<Posts> posts) {
+    public NoteAdapter(Note note, List<Notes> posts) {
         this.noteActivity = note;
-        this.postsStack = posts;
+        this.notesList = posts;
     }
 
     @NonNull
@@ -37,14 +33,14 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull NoteViewHolder holder, final int position) {
-        holder.posttitle.setText(postsStack.get(position).getPosttitle());
-        holder.postdetails.setText(postsStack.get(position).getPostdetails());
+        holder.noteTitle.setText(notesList.get(position).getNoteTitle());
+        holder.noteDetails.setText(notesList.get(position).getNoteDetails());
 
         holder.postbtndelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                noteActivity.firebaseFirestore.collection(noteActivity.collectionNames.getNotes())
-                        .document(postsStack.get(position).getPosdid())
+                noteActivity.firestore.collection(noteActivity.collectionNames.getNotes())
+                        .document(notesList.get(position).getNoteId())
                         .delete()
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
@@ -59,19 +55,19 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
     @Override
     public int getItemCount() {
-        return postsStack.size();
+        return notesList.size();
     }
 
     class NoteViewHolder extends RecyclerView.ViewHolder {
 
-        TextView posttitle,postdetails;
+        TextView noteTitle, noteDetails;
         Button postbtndelete;
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            posttitle = itemView.findViewById(R.id.posttitle);
-            postdetails = itemView.findViewById(R.id.postdetails);
+            noteTitle = itemView.findViewById(R.id.noteTitle);
+            noteDetails = itemView.findViewById(R.id.noteDetails);
             postbtndelete = itemView.findViewById(R.id.postbtndelete);
         }
     }

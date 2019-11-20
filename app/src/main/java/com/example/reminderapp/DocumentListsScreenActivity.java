@@ -6,12 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import com.example.reminderapp.adapters.DocumentListAdapter;
 import com.example.reminderapp.helpers.CollectionNames;
-import com.example.reminderapp.models.Posts;
+import com.example.reminderapp.models.Documents;
+import com.example.reminderapp.models.Notes;
 import com.example.reminderapp.models.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -42,24 +41,42 @@ public class DocumentListsScreenActivity extends AppCompatActivity {
         notesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-        firestore.collection(new CollectionNames().getNotes())
-                .whereEqualTo(Posts.USER_ID, FirebaseAuth.getInstance().getCurrentUser().getUid())
+        getAllDocumentsData();
+    }
+
+
+    public void deleteDocument(String id) {
+        firestore.collection(new CollectionNames().getDocumentCollection())
+                .document(id)
+                .delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        getAllDocumentsData();
+                    }
+                });
+    }
+
+
+    public void getAllDocumentsData() {
+        firestore.collection(new CollectionNames().getDocumentCollection())
+                .whereEqualTo(Users.USER_ID, FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        List<Posts> postsList = new ArrayList<>();
+                        List<Documents> docsList = new ArrayList<>();
 
                         for (QueryDocumentSnapshot doc : task.getResult()) {
-                            Posts post = new Posts();
-                            post.setPosttitle(doc.getString(Posts.POST_TITLE));
-                            post.setAboutImage(doc.getString(Posts.ABOUT_IMAGE));
-                            post.setPosdid(doc.getId());
+                            Documents post = new Documents();
+                            post.setDocImage(doc.getString(Documents.DOC_IMAGE));
+                            post.setDocTitle(doc.getString(Documents.DOC_TITLE));
+                            post.setDocId(doc.getId());
 
-                            postsList.add(post);
+                            docsList.add(post);
                         }
 
-                        documentListAdapter = new DocumentListAdapter(DocumentListsScreenActivity.this, postsList);
+                        documentListAdapter = new DocumentListAdapter(DocumentListsScreenActivity.this, docsList);
                         notesRecyclerView.setAdapter(documentListAdapter);
 
                     }

@@ -4,11 +4,13 @@ import java.util.List;
 
 public class Users {
 
+    public static final String USER_ID = "userId";
     public static final String USERNAME = "username";
     public static final String PHONE = "phone";
     public static final String EMAIL = "email";
     public static final String PIN = "loginPin";
     public static final String PASSWORD = "password";
+    public static final String USER_AVATAR = "userAvatar";
 
 
     private String username;
@@ -16,6 +18,7 @@ public class Users {
     private String loginPin;
     private String email;
     private String phone;
+    private String userAvatar;
 
 
     public Users() {}
@@ -59,5 +62,13 @@ public class Users {
 
     public void setLoginPin(String loginPin) {
         this.loginPin = loginPin;
+    }
+
+    public String getUserAvatar() {
+        return userAvatar;
+    }
+
+    public void setUserAvatar(String userAvatar) {
+        this.userAvatar = userAvatar;
     }
 }
