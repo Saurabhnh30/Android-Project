@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
 
     <LinearLayout
         android:id="@+id/back"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F2F7F4"
+        android:background="#E0D393"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="10sp"
@@ -18,26 +20,19 @@
         android:paddingTop="10sp"
         android:paddingEnd="10sp">
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@android:drawable/bottom_bar" />
-
         <TextView
             android:id="@+id/encrytitle"
             android:layout_width="385dp"
             android:layout_height="wrap_content"
+            android:fontFamily="cursive"
             android:gravity="center|left"
-            android:hint="Title"
-            android:textColor="#070707"
-            android:textSize="30sp" />
+            android:textColor="#0C0C0C"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/encryptdelete"
-            android:layout_width="174dp"
-            android:layout_height="wrap_content"
+            android:layout_width="132dp"
+            android:layout_height="30dp"
             android:background="#121213"
             android:foregroundGravity="center"
             android:outlineAmbientShadowColor="#19881D"
@@ -45,13 +40,6 @@
             android:shadowColor="#949B56"
             android:text="DELETE"
             android:textColor="#F2F1F5" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="362dp"
-            android:layout_height="2dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@android:drawable/bottom_bar" />
 
     </LinearLayout>
 
