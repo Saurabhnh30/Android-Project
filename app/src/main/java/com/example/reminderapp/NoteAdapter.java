@@ -36,21 +36,6 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
         holder.noteTitle.setText(notesList.get(position).getNoteTitle());
         holder.noteDetails.setText(notesList.get(position).getNoteDetails());
 
-        holder.postbtndelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                noteActivity.firestore.collection(noteActivity.collectionNames.getNotes())
-                        .document(notesList.get(position).getNoteId())
-                        .delete()
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                noteActivity.loadDataFromFirebase();
-                            }
-                        });
-
-            }
-        });
     }
 
     @Override
@@ -61,14 +46,12 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     class NoteViewHolder extends RecyclerView.ViewHolder {
 
         TextView noteTitle, noteDetails;
-        Button postbtndelete;
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
 
             noteTitle = itemView.findViewById(R.id.noteTitle);
             noteDetails = itemView.findViewById(R.id.noteDetails);
-            postbtndelete = itemView.findViewById(R.id.postbtndelete);
         }
     }
 }

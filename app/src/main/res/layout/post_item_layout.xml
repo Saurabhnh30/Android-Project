@@ -33,12 +33,6 @@
             android:textColor="#0A0A0A"
             android:textSize="14sp" />
 
-        <Button
-            android:id="@+id/postbtndelete"
-            android:layout_width="38dp"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/ic_menu_delete" />
-
     </LinearLayout>
 
 </LinearLayout>
