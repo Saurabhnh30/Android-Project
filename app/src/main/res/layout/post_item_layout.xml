@@ -2,15 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#C4C6C7"
     android:orientation="vertical"
-    android:padding="15dp">
+    android:padding="5sp">
 
     <TextView
         android:id="@+id/noteTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#DBDDDD"
         android:fontFamily="monospace"
         android:gravity="center"
+        android:paddingTop="8sp"
+        android:paddingEnd="8sp"
         android:text="TextView"
         android:textColor="#0A0A0A"
         android:textSize="24sp"
@@ -27,8 +31,11 @@
             android:layout_height="53dp"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="#FFFFFF"
             android:fontFamily="monospace"
             android:gravity="center"
+            android:paddingTop="8sp"
+            android:paddingEnd="8sp"
             android:text="TextView"
             android:textColor="#0A0A0A"
             android:textSize="14sp" />

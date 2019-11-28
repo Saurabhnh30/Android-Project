@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3EFEF"
-    tools:context=".EncryptScreen">
+
+    tools:context=".EncryptScreen"
+    >
 
     <TextView
         android:id="@+id/textView20"
@@ -25,13 +26,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/encryptview"
-        android:layout_width="404dp"
-        android:layout_height="616dp"
-        android:background="#DDDBDB"
+        android:layout_width="401dp"
+        android:layout_height="610dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
     <Button
         android:id="@+id/encryptadddatabutton"

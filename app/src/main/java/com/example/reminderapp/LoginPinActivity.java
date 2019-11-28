@@ -38,6 +38,8 @@ public class LoginPinActivity extends AppCompatActivity {
         firestore = FirebaseFirestore.getInstance();
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
+        setTitle("Login");
+
         userPinEditText = findViewById(R.id.userPinEditText);
         userPinSubmitBtn = findViewById(R.id.userPinSubmitBtn);
         pinprogressBar  = findViewById(R.id.pinprogressBar);

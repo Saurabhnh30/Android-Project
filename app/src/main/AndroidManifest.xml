@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NoteDisplayActivity"></activity>
+        <activity android:name=".AddContactsHome"></activity>
+        <activity android:name=".NoteDisplayActivity" />
         <activity android:name=".DocumentListsScreenActivity" />
         <activity android:name=".Documentpage" />
         <activity android:name=".Updateprofile" />
@@ -35,6 +36,9 @@
         <activity android:name=".MainActivity" />
 
         <receiver android:name=".NotifierAlarm" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

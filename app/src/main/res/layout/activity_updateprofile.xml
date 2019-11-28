@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Updateprofile">
+    tools:context=".Updateprofile"
+    android:background="@drawable/updatewallpaper">
 
     <EditText
         android:id="@+id/usernameupdate"
-        android:layout_width="322dp"
-        android:layout_height="47dp"
+        android:layout_width="304dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="4dp"
         android:ems="10"
         android:fontFamily="casual"
@@ -24,7 +25,78 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.494" />
+        app:layout_constraintVertical_bias="0.385" />
+
+    <EditText
+        android:id="@+id/phoneupdate"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:textColor="#070707"
+        android:textColorHint="#757272"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.462" />
+
+    <EditText
+        android:id="@+id/emailupdate"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#070707"
+        android:textColorHint="#757272"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.549" />
+
+    <EditText
+        android:id="@+id/pinupdate"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Pin number"
+        android:inputType="number"
+        android:textColor="#070707"
+        android:textColorHint="#757272"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.719" />
+
+    <EditText
+        android:id="@+id/passwordupdate"
+        android:layout_width="305dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="#070707"
+        android:textColorHint="#757272"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.631" />
 
     <Button
         android:id="@+id/updateprofilebuttonid"
@@ -36,82 +108,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
-
-    <EditText
-        android:id="@+id/emailupdate"
-        android:layout_width="323dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:fontFamily="casual"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:textColor="#070707"
-        android:textColorHint="#757272"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.665" />
-
-    <EditText
-        android:id="@+id/passwordupdate"
-        android:layout_width="313dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:fontFamily="casual"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColor="#070707"
-        android:textColorHint="#757272"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751" />
-
-    <EditText
-        android:id="@+id/pinupdate"
-        android:layout_width="285dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:fontFamily="casual"
-        android:hint="Pin number"
-        android:inputType="number"
-        android:textColor="#070707"
-        android:textColorHint="#757272"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.357"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
-
-    <EditText
-        android:id="@+id/phoneupdate"
-        android:layout_width="305dp"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:fontFamily="casual"
-        android:hint="Phone"
-        android:inputType="phone"
-        android:textColor="#070707"
-        android:textColorHint="#757272"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.415"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.572" />
+        app:layout_constraintVertical_bias="0.822" />
 
     <TextView
         android:id="@+id/textView15"
@@ -122,7 +119,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="cursive"
         android:text="Smart Phone Book "
-        android:textColor="#0A0A0A"
+        android:textColor="#000000"
         android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -130,7 +127,7 @@
         app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/textView19"
@@ -139,7 +136,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="cursive"
         android:text="Update your Profile"
-        android:textColor="#0A0A0A"
+        android:textColor="#000000"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -147,6 +144,6 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.163" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

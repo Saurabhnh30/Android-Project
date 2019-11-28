@@ -26,7 +26,7 @@ public class home extends AppCompatActivity
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firestore;
 
-    Button rmd, addnote, logout ,encry, update , docbutton;
+    Button rmd, addnote, logout ,encry, update , docbutton, addHomeContact;
     TextView usernameTV, emailTV, phoneTV;
     ImageView userAvatarHomeActivity;
 
@@ -37,6 +37,8 @@ public class home extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        setTitle("Home");
+
         firestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -44,6 +46,7 @@ public class home extends AppCompatActivity
         phoneTV = findViewById(R.id.phoneTV);
         emailTV = findViewById(R.id.emailTV);
         encry = findViewById(R.id.encry);
+
         userAvatarHomeActivity = findViewById(R.id.userAvatarHomeActivity);
 
         logout = findViewById(R.id.logout);
@@ -104,6 +107,16 @@ public class home extends AppCompatActivity
             public void onClick(View view) {
                 Intent e = new Intent(home.this ,Documentpage.class);
                 startActivity(e);
+            }
+        });
+
+
+        addHomeContact = findViewById(R.id.addHomeContact);
+        addHomeContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent f = new Intent(home.this, AddContactsHome.class);
+                startActivity(f);
             }
         });
     }
