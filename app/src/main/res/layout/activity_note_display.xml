@@ -55,7 +55,7 @@
                 <ImageView
                     android:id="@+id/docImageView"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="583dp"
                     android:visibility="gone"
                     tools:srcCompat="@tools:sample/avatars" />
 

@@ -31,7 +31,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="614dp"
+        android:layout_height="603dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:gravity="center|top"
@@ -54,6 +54,7 @@
             android:id="@+id/recyclerid"
             android:layout_width="376dp"
             android:layout_height="595dp"
+            android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
             android:visibility="visible" />
 
     </LinearLayout>

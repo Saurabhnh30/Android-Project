@@ -105,7 +105,7 @@ public class home extends AppCompatActivity
         docbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent e = new Intent(home.this ,Documentpage.class);
+                Intent e = new Intent(home.this ,DocumentListsScreenActivity.class);
                 startActivity(e);
             }
         });

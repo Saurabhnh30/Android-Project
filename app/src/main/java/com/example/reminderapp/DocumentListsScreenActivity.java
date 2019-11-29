@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.reminderapp.adapters.DocumentListAdapter;
 import com.example.reminderapp.helpers.CollectionNames;
@@ -26,11 +29,12 @@ public class DocumentListsScreenActivity extends AppCompatActivity {
 
     FirebaseFirestore firestore;
     DocumentListAdapter documentListAdapter;
-
+    Button docAddButton;
     RecyclerView notesRecyclerView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_document_lists_screen);
 
@@ -39,6 +43,15 @@ public class DocumentListsScreenActivity extends AppCompatActivity {
         notesRecyclerView = findViewById(R.id.notesRecyclerView);
         notesRecyclerView.setHasFixedSize(true);
         notesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        docAddButton =  findViewById(R.id.docAddButton);
+
+        docAddButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent( DocumentListsScreenActivity.this,  Documentpage.class);
+                startActivity(intent);
+            }
+        });
 
 
         getAllDocumentsData();

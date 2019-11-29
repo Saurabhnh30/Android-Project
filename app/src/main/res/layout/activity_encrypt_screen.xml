@@ -10,13 +10,13 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="257dp"
-        android:layout_height="56dp"
+        android:layout_width="332dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="cursive"
+        android:fontFamily="serif-monospace"
         android:text="Encrypt your Data"
         android:textColor="#0A0A0A"
-        android:textSize="36sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,12 +28,13 @@
         android:id="@+id/encryptview"
         android:layout_width="401dp"
         android:layout_height="610dp"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:backgroundTint="@color/common_google_signin_btn_text_light_pressed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/encryptadddatabutton"

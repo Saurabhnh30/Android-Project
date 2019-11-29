@@ -45,17 +45,19 @@
 
     <EditText
         android:id="@+id/encrypttitle"
-        android:layout_width="263dp"
-        android:layout_height="120dp"
+        android:layout_width="365dp"
+        android:layout_height="166dp"
         android:ems="10"
-        android:hint="Enter the Information"
-        android:inputType="textPersonName"
+        android:gravity="start|top"
+        android:hint="Enter The Data"
+        android:inputType="textMultiLine"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
+        app:layout_constraintVertical_bias="0.342" />
 
     <Button
         android:id="@+id/encryptbutton"
