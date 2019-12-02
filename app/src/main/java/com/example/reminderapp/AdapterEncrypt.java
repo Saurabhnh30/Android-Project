@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.reminderapp.models.Encrypts;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -17,10 +19,10 @@ public class AdapterEncrypt extends RecyclerView.Adapter<AdapterEncrypt.EncryVie
 {
 
     EncryptScreen encryptScreen;
-    List<HashMap<String, String>> itemList;
+    List<Encrypts> itemList;
 
 
-    public AdapterEncrypt(EncryptScreen c, List<HashMap<String, String>> it) {
+    public AdapterEncrypt(EncryptScreen c, List<Encrypts> it) {
         this.encryptScreen = c;
         this.itemList = it;
     }
@@ -33,14 +35,14 @@ public class AdapterEncrypt extends RecyclerView.Adapter<AdapterEncrypt.EncryVie
 
     @Override
     public void onBindViewHolder(@NonNull EncryViewHolder holder, final int position) {
-        holder.encrytitle.setText(itemList.get(position).get("title"));
+        holder.encrytitle.setText(itemList.get(position).getTitle());
         
-        holder.encryptdelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                encryptScreen.deleteEncrypt(itemList.get(position).get("id"));
-            }
-        });
+//        holder.encryptdelete.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                encryptScreen.deleteEncrypt(itemList.get(position)._getEncryptId(), position);
+//            }
+//        });
     }
 
     @Override

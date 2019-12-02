@@ -1,6 +1,5 @@
 package com.example.reminderapp.models;
 
-import java.util.List;
 
 public class Users {
 

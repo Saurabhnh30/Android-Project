@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.reminderapp.helpers.CollectionNames;
 import com.example.reminderapp.models.Notes;
@@ -44,6 +45,7 @@ public class Note extends AppCompatActivity
     RecyclerView recyclerView;
     ProgressBar noteProgrssBar;
     EditText postTitleET, postDescriptionET;
+    SwipeRefreshLayout noteActivitySwipeRefresh;
 
     NoteAdapter noteAdapter;
     List<Notes> notesList;
@@ -64,6 +66,8 @@ public class Note extends AppCompatActivity
 
         Log.d("NOTE LOG ", "On Created method called");
 
+        setTitle("Notes");
+
         btnnote =  findViewById(R.id.btnote);
         recyclerView = findViewById(R.id.recyclerid);
         recyclerView.setHasFixedSize(true);
@@ -72,6 +76,7 @@ public class Note extends AppCompatActivity
         LOGGED_IN_USER_ID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         noteProgrssBar = findViewById(R.id.noteProgrssBar);
+        noteActivitySwipeRefresh = findViewById(R.id.noteActivitySwipeRefresh);
 
         collectionNames = new CollectionNames();
 
@@ -94,6 +99,14 @@ public class Note extends AppCompatActivity
         loadDataFromFirebase();
 
         onCreated = false;
+
+        noteActivitySwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                noteAdapter = new NoteAdapter(Note.this, notesList);
+                recyclerView.setAdapter(noteAdapter);
+            }
+        });
     }
 
     @Override

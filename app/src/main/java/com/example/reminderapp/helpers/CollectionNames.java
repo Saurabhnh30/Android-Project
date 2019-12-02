@@ -7,6 +7,9 @@ public class CollectionNames {
     private String usersCollection = "users";
     private String documentCollection = "documents";
 
+    public static final String USERS = "users";
+    public static final String ENCRYPT = "encrypt";
+
 
 
     public CollectionNames(){}

@@ -208,6 +208,8 @@ public class Register extends AppCompatActivity {
         }
         else {
             Toast.makeText(Register.this, "User avatar cannot be empty", Toast.LENGTH_LONG).show();
+            signupProgressBar.setVisibility(View.GONE);
+            register.setVisibility(View.VISIBLE);
         }
     }
 

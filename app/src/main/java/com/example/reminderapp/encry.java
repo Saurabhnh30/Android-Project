@@ -12,8 +12,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.reminderapp.helpers.CollectionNames;
+import com.example.reminderapp.models.Encrypts;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -40,7 +43,7 @@ public class encry extends AppCompatActivity
     EditText encrypttitle;
     TextView decrypttitle;
     Button encryptbutton, decryptbutton , next;
-    List<Byte> ed = new ArrayList<Byte>();
+    List<Byte> ed = new ArrayList<>();
 
     private String publickey = " " ;
     private String privatekey = " " ;
@@ -98,10 +101,11 @@ public class encry extends AppCompatActivity
 
         encrypttitle.setText("");
 
-        HashMap<String, Object> data = new HashMap<>();
-        data.put("title", s);
+        Encrypts encrypt = new Encrypts();
+        encrypt.setTitle(s);
+        encrypt.setUserId(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
-        firestore.collection("encrypt").add(data)
+        firestore.collection(CollectionNames.ENCRYPT).add(encrypt)
                 .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentReference> task) {
@@ -118,11 +122,11 @@ public class encry extends AppCompatActivity
     public void deceypt(View view)
     {
 
-        firestore.collection("encrypt").limit(1).get()
+        firestore.collection(CollectionNames.ENCRYPT).limit(1).get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        String encryptData = task.getResult().getDocuments().get(0).getString("title");
+                        String encryptData = task.getResult().getDocuments().get(0).getString(Encrypts.TITLE);
                         Log.d("ENCRYPT_LOG", encryptData);
 
                         try {

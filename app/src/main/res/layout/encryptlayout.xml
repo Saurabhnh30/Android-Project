@@ -42,7 +42,8 @@
             android:outlineSpotShadowColor="#08665E"
             android:shadowColor="#949B56"
             android:text="DELETE"
-            android:textColor="#F2F1F5" />
+            android:textColor="#F2F1F5"
+            android:visibility="gone" />
 
     </LinearLayout>
 
