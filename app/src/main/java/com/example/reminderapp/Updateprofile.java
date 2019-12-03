@@ -188,6 +188,24 @@ public class Updateprofile extends AppCompatActivity
         }
     }
 
+    public void togglePhoneUpdate(View v) {
+        if (phoneEditBtn.getVisibility() == View.VISIBLE) {
+            phoneEditBtn.setVisibility(View.GONE);
+            updatePhoneTV.setVisibility(View.GONE);
+            phoneCancelUpdateBtn.setVisibility(View.VISIBLE);
+            phoneupdate.setVisibility(View.VISIBLE);
+            phoneupdate.setText(user.getPhone());
+        }
+        else {
+            phoneEditBtn.setVisibility(View.VISIBLE);
+            updatePhoneTV.setVisibility(View.VISIBLE);
+            phoneCancelUpdateBtn.setVisibility(View.GONE);
+            phoneupdate.setVisibility(View.GONE);
+            phoneupdate.setText("");
+        }
+    }
+
+
     public void toggleEmailUpdate(View v) {
         if (emailEditBtn.getVisibility() == View.VISIBLE) {
             emailEditBtn.setVisibility(View.GONE);
@@ -202,6 +220,45 @@ public class Updateprofile extends AppCompatActivity
             emailCancelUpdateBtn.setVisibility(View.GONE);
             emailupdate.setVisibility(View.GONE);
             emailupdate.setText("");
+        }
+    }
+
+
+
+
+
+    public void togglePasswordUpdate(View v) {
+        if (passwordEditBtn.getVisibility() == View.VISIBLE) {
+            passwordEditBtn.setVisibility(View.GONE);
+            updatePasswordTV.setVisibility(View.GONE);
+            passwordCancelUpdateBtn.setVisibility(View.VISIBLE);
+            passwordupdate.setVisibility(View.VISIBLE);
+            passwordupdate.setText(user.getPassword());
+        }
+        else {
+            passwordEditBtn.setVisibility(View.VISIBLE);
+            updatePasswordTV.setVisibility(View.VISIBLE);
+            passwordCancelUpdateBtn.setVisibility(View.GONE);
+            passwordupdate.setVisibility(View.GONE);
+            passwordupdate.setText("");
+        }
+    }
+
+
+    public void togglePinUpdate(View v) {
+        if (pinEditBtn.getVisibility() == View.VISIBLE) {
+            pinEditBtn.setVisibility(View.GONE);
+            updatePinTV.setVisibility(View.GONE);
+            pinCancelUpdateBtn.setVisibility(View.VISIBLE);
+            pinupdate.setVisibility(View.VISIBLE);
+            pinupdate.setText(user.getLoginPin());
+        }
+        else {
+            pinEditBtn.setVisibility(View.VISIBLE);
+            updatePinTV.setVisibility(View.VISIBLE);
+            pinCancelUpdateBtn.setVisibility(View.GONE);
+            pinupdate.setVisibility(View.GONE);
+            pinupdate.setText("");
         }
     }
 

@@ -184,6 +184,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/white"
+                    android:onClick="togglePhoneUpdate"
                     android:padding="10dp"
                     app:srcCompat="@drawable/ic_edit_black" />
 
@@ -193,6 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
+                    android:onClick="togglePhoneUpdate"
                     android:padding="10dp"
                     android:visibility="gone"
                     app:srcCompat="@android:drawable/ic_delete" />
@@ -316,6 +318,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:onClick="togglePasswordUpdate"
                 android:orientation="horizontal">
 
                 <ImageButton
@@ -324,6 +327,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/white"
+                    android:onClick="togglePasswordUpdate"
                     android:padding="10dp"
                     app:srcCompat="@drawable/ic_edit_black" />
 
@@ -385,6 +389,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:onClick="togglePinUpdate"
                 android:orientation="horizontal">
 
                 <ImageButton
@@ -393,6 +398,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@android:color/white"
+                    android:onClick="togglePinUpdate"
                     android:padding="10dp"
                     app:srcCompat="@drawable/ic_edit_black" />
 
