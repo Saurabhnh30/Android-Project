@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/contactListLL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -16,7 +17,7 @@
             android:padding="10dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_horizontal|center_vertical"
@@ -30,7 +31,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="500dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
@@ -54,20 +55,6 @@
                     android:textSize="16sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal|center_vertical"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_delete_black" />
-            </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
 
@@ -75,5 +62,5 @@
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="?android:attr/listDivider" />
+        android:background="@android:color/darker_gray" />
 </LinearLayout>

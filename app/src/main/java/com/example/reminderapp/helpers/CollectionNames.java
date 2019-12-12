@@ -9,6 +9,7 @@ public class CollectionNames {
 
     public static final String USERS = "users";
     public static final String ENCRYPT = "encrypt";
+    public static final String CONTACTS = "contacts";
 
 
 

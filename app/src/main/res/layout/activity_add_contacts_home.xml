@@ -8,7 +8,7 @@
     tools:context=".AddContactsHome">
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/textView11"
         android:layout_width="299dp"
         android:layout_height="59dp"
         android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="0.155" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/textView15"
         android:layout_width="363dp"
         android:layout_height="59dp"
         android:layout_marginStart="8dp"
@@ -47,8 +47,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.045" />
 
+    <ImageView
+        android:id="@+id/contactAvatarIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/addcontactphotoBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <Button
-        android:id="@+id/Addcontactphoto"
+        android:id="@+id/addcontactphotoBtn"
         android:layout_width="61dp"
         android:layout_height="59dp"
         android:background="@android:drawable/ic_menu_camera"
@@ -56,26 +66,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321" />
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="251dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:hint="First name"
-        android:inputType="textPersonName"
-        android:paddingTop="10sp"
-        android:paddingEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419" />
+        app:layout_constraintVertical_bias="0.433" />
 
     <ImageView
-        android:id="@+id/imageView8"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:background="@android:drawable/ic_menu_compass"
@@ -84,10 +77,10 @@
         app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintVertical_bias="0.69" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/contactSirnameET"
         android:layout_width="251dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -100,15 +93,15 @@
         app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.608" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/contactEmailET"
         android:layout_width="251dp"
         android:layout_height="44dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -116,10 +109,9 @@
         app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintVertical_bias="0.839" />
 
     <ImageView
-        android:id="@+id/imageView12"
         android:layout_width="41dp"
         android:layout_height="42dp"
         android:background="@android:drawable/ic_dialog_email"
@@ -128,10 +120,10 @@
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.731" />
+        app:layout_constraintVertical_bias="0.84" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/contactCompanyET"
         android:layout_width="251dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -144,15 +136,15 @@
         app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574" />
+        app:layout_constraintVertical_bias="0.682" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/contactPhoneET"
         android:layout_width="251dp"
         android:layout_height="44dp"
         android:ems="10"
         android:hint="Phone"
-        android:inputType="textPersonName"
+        android:inputType="phone"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -160,10 +152,10 @@
         app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.655" />
+        app:layout_constraintVertical_bias="0.764" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/contactSubmitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
@@ -172,10 +164,9 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.833" />
+        app:layout_constraintVertical_bias="0.942" />
 
     <ImageView
-        android:id="@+id/imageView2"
         android:layout_width="44dp"
         android:layout_height="41dp"
         android:background="@android:drawable/ic_menu_myplaces"
@@ -184,6 +175,54 @@
         app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintVertical_bias="0.53" />
+
+    <EditText
+        android:id="@+id/contactFirstnameET"
+        android:layout_width="251dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        android:paddingTop="10sp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <ProgressBar
+        android:id="@+id/contactSubmitPB"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/contactSubmitBtn"
+        app:layout_constraintStart_toStartOf="@+id/contactSubmitBtn"
+        app:layout_constraintTop_toTopOf="@+id/contactSubmitBtn" />
+
+    <Button
+        android:id="@+id/contactUpdateCancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="23dp"
+        android:text="Cancel"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactEmailET" />
+
+    <Button
+        android:id="@+id/contactUpdateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="68dp"
+        android:text="Update"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactEmailET" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
