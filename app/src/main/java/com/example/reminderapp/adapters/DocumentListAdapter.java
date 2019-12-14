@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,18 +23,21 @@ import com.example.reminderapp.models.Documents;
 import com.example.reminderapp.models.Notes;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class DocumentListAdapter extends RecyclerView.Adapter<DocumentListAdapter.DocumentListViewHolder> {
+public class DocumentListAdapter extends RecyclerView.Adapter<DocumentListAdapter.DocumentListViewHolder> implements Filterable {
 
     private DocumentListsScreenActivity docListActivity;
     private List<Documents> documentsList;
+    private List<Documents> allDocumentsList;
 
 
     public DocumentListAdapter(DocumentListsScreenActivity docListActivity, List<Documents> pl) {
         Log.d("DOC_LIST_ADAP", pl.toString());
         this.docListActivity = docListActivity;
         this.documentsList = pl;
+        this.allDocumentsList = new ArrayList<>(pl);
     }
 
 
@@ -70,6 +75,39 @@ public class DocumentListAdapter extends RecyclerView.Adapter<DocumentListAdapte
     @Override
     public int getItemCount() {
         return documentsList.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                List<Documents> filteredDocuments = new ArrayList<>();
+
+                if (charSequence == null || charSequence.length() == 0) {
+                    filteredDocuments.addAll(allDocumentsList);
+                }
+                else {
+                    String filteredPattern = charSequence.toString().toLowerCase().trim();
+                    for (Documents u : allDocumentsList) {
+                        if (u.getDocTitle().toLowerCase().contains(filteredPattern)) {
+                            filteredDocuments.add(u);
+                        }
+                    }
+                }
+
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = filteredDocuments;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                documentsList.clear();
+                documentsList.addAll((List) filterResults.values);
+                notifyDataSetChanged();
+            }
+        };
     }
 
     class DocumentListViewHolder extends RecyclerView.ViewHolder {

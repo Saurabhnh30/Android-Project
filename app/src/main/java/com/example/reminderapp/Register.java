@@ -154,7 +154,9 @@ public class Register extends AppCompatActivity {
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
                             final String REGISTERED_USER_ID = task.getResult().getUser().getUid();
+
                             if (task.isSuccessful()) {
 
                                 final StorageReference fileRef = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(imgUri));

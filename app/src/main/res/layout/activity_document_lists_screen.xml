@@ -8,6 +8,7 @@
     tools:context=".DocumentListsScreenActivity">
 
     <SearchView
+        android:id="@+id/documentSearchView"
         android:layout_width="244dp"
         android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"

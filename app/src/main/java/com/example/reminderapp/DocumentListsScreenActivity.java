@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
 
 import com.example.reminderapp.adapters.DocumentListAdapter;
 import com.example.reminderapp.helpers.CollectionNames;
@@ -31,6 +32,7 @@ public class DocumentListsScreenActivity extends AppCompatActivity {
     DocumentListAdapter documentListAdapter;
     Button docAddButton;
     RecyclerView notesRecyclerView;
+    SearchView documentSearchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -40,7 +42,10 @@ public class DocumentListsScreenActivity extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
 
+
+
         notesRecyclerView = findViewById(R.id.notesRecyclerView);
+        documentSearchView = findViewById(R.id.documentSearchView);
         notesRecyclerView.setHasFixedSize(true);
         notesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         docAddButton =  findViewById(R.id.docAddButton);
@@ -53,8 +58,21 @@ public class DocumentListsScreenActivity extends AppCompatActivity {
             }
         });
 
-
         getAllDocumentsData();
+
+        documentSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                documentListAdapter.getFilter().filter(s);
+                return false;
+            }
+        });
+
     }
 
 
@@ -91,7 +109,6 @@ public class DocumentListsScreenActivity extends AppCompatActivity {
 
                         documentListAdapter = new DocumentListAdapter(DocumentListsScreenActivity.this, docsList);
                         notesRecyclerView.setAdapter(documentListAdapter);
-
                     }
                 });
     }
