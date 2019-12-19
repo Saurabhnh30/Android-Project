@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#C4C6C7"
+    android:background="@drawable/common_google_signin_btn_text_dark_normal_background"
     android:orientation="vertical"
     android:padding="5sp">
 
@@ -10,7 +10,7 @@
         android:id="@+id/noteTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#DBDDDD"
+        android:background="@drawable/common_google_signin_btn_text_light_normal_background"
         android:fontFamily="monospace"
         android:gravity="center"
         android:paddingTop="8sp"
@@ -31,7 +31,7 @@
             android:layout_height="53dp"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="#FFFFFF"
+            android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
             android:fontFamily="monospace"
             android:gravity="center"
             android:paddingTop="8sp"

@@ -4,120 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/homewallpaper"
+    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
     tools:context=".home">
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="362dp"
-        android:layout_height="2dp"
-        android:scaleType="centerCrop"
-        app:srcCompat="@android:drawable/bottom_bar"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="11dp" />
-
-    <Button
-        android:id="@+id/docbutton"
-        android:layout_width="160dp"
-        android:layout_height="47dp"
-        android:text="Document"
-        android:textColor="#070707"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
 
     <Button
         android:id="@+id/addnote"
         android:layout_width="160dp"
         android:layout_height="47dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         android:text="Add Note"
         android:textColor="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="362dp"
-        android:layout_height="2dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15"
-        app:srcCompat="@android:drawable/bottom_bar" />
-
-    <Button
-        android:id="@+id/rmd"
-        android:layout_width="160dp"
-        android:layout_height="47dp"
-        android:text="Reminder"
-        android:textColor="#070707"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
+        app:layout_constraintVertical_bias="0.187" />
 
     <Button
         android:id="@+id/addHomeContact"
         android:layout_width="160dp"
         android:layout_height="47dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         android:text="Add Contacts"
         android:textColor="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
+        app:layout_constraintVertical_bias="0.252" />
 
     <Button
         android:id="@+id/encry"
         android:layout_width="160dp"
         android:layout_height="47sp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         android:text="Encrypt Note"
         android:textColor="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintVertical_bias="0.323" />
+
+    <Button
+        android:id="@+id/docbutton"
+        android:layout_width="160dp"
+        android:layout_height="47dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:text="Document"
+        android:textColor="#070707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
+
+    <Button
+        android:id="@+id/Update"
+        android:layout_width="160dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:text="Update Profile"
+        android:textColor="#070707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.188" />
+
+    <Button
+        android:id="@+id/rmd"
+        android:layout_width="160dp"
+        android:layout_height="47dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:text="Reminder"
+        android:textColor="#070707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.252" />
 
     <ImageView
         android:id="@+id/userAvatarHomeActivity"
-        android:layout_width="88dp"
-        android:layout_height="89dp"
-        android:background="@android:drawable/screen_background_light_transparent"
+        android:layout_width="116dp"
+        android:layout_height="114dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.006" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="236dp"
-        android:layout_height="98dp"
+        android:layout_width="267dp"
+        android:layout_height="121dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/usernameTV"
@@ -125,8 +124,9 @@
             android:layout_height="wrap_content"
 
             android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textColor="#070505"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/phoneTV"
@@ -134,8 +134,9 @@
             android:layout_height="wrap_content"
 
             android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textColor="#070505"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/emailTV"
@@ -143,24 +144,11 @@
             android:layout_height="wrap_content"
 
             android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textColor="#070505"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/Update"
-        android:layout_width="160dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:text="Update Profile"
-        android:textColor="#070707"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
 
     <Button
         android:id="@+id/logout"
@@ -188,13 +176,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/contactRecyclerView"
-        android:layout_width="386dp"
-        android:layout_height="413dp"
+        android:layout_width="373dp"
+        android:layout_height="392dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintVertical_bias="0.851" />
 
     <ProgressBar
         android:id="@+id/contactProgressBar"

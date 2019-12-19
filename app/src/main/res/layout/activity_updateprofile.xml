@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Updateprofile"
+    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
     android:orientation="vertical"
-    android:background="@drawable/updatewallpaper">
+    tools:context=".Updateprofile">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="395dp"
+        android:layout_height="412dp"
         android:layout_weight="3"
         android:gravity="center"
         android:orientation="vertical">
@@ -21,11 +21,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:fontFamily="cursive"
+            android:fontFamily="serif-monospace"
             android:text="Smart Phone Book "
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="50dp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
             android:text="Update your Profile"
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="36sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,6 +63,7 @@
         <LinearLayout
             android:layout_width="304dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -134,6 +135,7 @@
         <LinearLayout
             android:layout_width="304dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -203,79 +205,81 @@
         </LinearLayout>
 
         <LinearLayout
-        android:layout_width="304dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="304dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Email" />
-
-            <TextView
-                android:id="@+id/updateEmailTV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:text="TextView"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/emailupdate"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="4dp"
-                android:ems="10"
-                android:fontFamily="casual"
-                android:hint="Email"
-                android:inputType="textPersonName"
-                android:textColor="#070707"
-                android:textColorHint="#757272"
-                android:textSize="18sp"
-                android:textStyle="normal"
-                android:visibility="gone" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/emailEditBtn"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/white"
-                android:onClick="toggleEmailUpdate"
-                android:padding="10dp"
-                app:srcCompat="@drawable/ic_edit_black" />
+                android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/emailCancelUpdateBtn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:onClick="toggleEmailUpdate"
-                android:padding="10dp"
-                android:visibility="gone"
-                app:srcCompat="@android:drawable/ic_delete" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email" />
+
+                <TextView
+                    android:id="@+id/updateEmailTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="TextView"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/emailupdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="4dp"
+                    android:ems="10"
+                    android:fontFamily="casual"
+                    android:hint="Email"
+                    android:inputType="textPersonName"
+                    android:textColor="#070707"
+                    android:textColorHint="#757272"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/emailEditBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:onClick="toggleEmailUpdate"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/ic_edit_black" />
+
+                <ImageButton
+                    android:id="@+id/emailCancelUpdateBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:onClick="toggleEmailUpdate"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    app:srcCompat="@android:drawable/ic_delete" />
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
 
         <LinearLayout
             android:layout_width="304dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -347,6 +351,7 @@
         <LinearLayout
             android:layout_width="304dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -415,10 +420,17 @@
 
         </LinearLayout>
 
+        <ProgressBar
+            android:id="@+id/updateProfileProrgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
         <Button
             android:id="@+id/updateprofilebuttonid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="105dp"
+            android:layout_height="60dp"
             android:text="Update"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -426,15 +438,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.822" />
-
-        <ProgressBar
-            android:id="@+id/updateProfileProrgressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone" />
     </LinearLayout>
-
 
 
 </LinearLayout>

@@ -29,9 +29,10 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         android:visibility="invisible"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-16dp" />
+        tools:layout_editor_absoluteX="-99dp"
+        tools:layout_editor_absoluteY="-76dp" />
 
     <TextView
         android:id="@+id/empty"
@@ -39,11 +40,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="cursive"
+        android:fontFamily="serif-monospace"
         android:gravity="center"
-        android:text="Smart Phone App"
+        android:text="Smart Phone book"
         android:textColor="#063F6D"
-        android:textSize="40sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
@@ -59,18 +60,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/common_google_signin_btn_text_light_normal_background"
         android:fontFamily="casual"
         android:gravity="center"
         android:text="Click Here Reminders "
-        android:textColor="#F2F4F5"
+        android:textColor="#913215"
         android:textSize="14sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintHorizontal_bias="0.585"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/recyclerView"
-        app:layout_constraintVertical_bias="0.927" />
+        app:layout_constraintVertical_bias="0.934" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
