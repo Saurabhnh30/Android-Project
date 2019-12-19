@@ -65,7 +65,7 @@
                     android:id="@+id/recyclerid"
                     android:layout_width="376dp"
                     android:layout_height="595dp"
-                    android:background="@drawable/floating_button_background"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
                     android:visibility="visible" />
 
             </LinearLayout>
