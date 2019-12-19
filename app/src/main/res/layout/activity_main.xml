@@ -74,7 +74,7 @@
         android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
         android:ems="10"
         android:fontFamily="monospace"
-        android:hint="Username"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:textColor="#063F6D"
         android:textColorHint="#ACA7A7"
