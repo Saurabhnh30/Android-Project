@@ -56,6 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="@color/common_google_signin_btn_text_dark_disabled"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="15dp">
@@ -431,6 +432,7 @@
             android:id="@+id/updateprofilebuttonid"
             android:layout_width="105dp"
             android:layout_height="60dp"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
             android:text="Update"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

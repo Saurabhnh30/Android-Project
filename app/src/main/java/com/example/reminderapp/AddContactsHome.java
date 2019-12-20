@@ -49,6 +49,7 @@ public class AddContactsHome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contacts_home);
 
+        setTitle(" Add Your Contacts");
         Intent intentUpdate = getIntent();
 
         firestore = FirebaseFirestore.getInstance();

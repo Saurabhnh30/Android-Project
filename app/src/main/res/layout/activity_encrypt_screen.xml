@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/floating_button_background"
+    android:background="@drawable/googleg_disabled_color_18"
     tools:context=".EncryptScreen">
 
     <TextView

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+    android:background="#90696868"
     tools:context=".home">
 
     <Button
@@ -99,24 +99,24 @@
         android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintVertical_bias="0.011" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="267dp"
-        android:layout_height="121dp"
+        android:layout_width="263dp"
+        android:layout_height="105dp"
         android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.025">
 
         <TextView
             android:id="@+id/usernameTV"
@@ -167,6 +167,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click here to Logout"
+        android:textColor="#F5F5F5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
@@ -178,7 +179,7 @@
         android:id="@+id/contactRecyclerView"
         android:layout_width="373dp"
         android:layout_height="392dp"
-        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:background="@drawable/note"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"

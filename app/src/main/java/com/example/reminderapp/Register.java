@@ -65,6 +65,8 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        setTitle("SigUp");
+
         user = findViewById(R.id.signupUsernameEditText);
         email = findViewById(R.id.signupEmailEditText);
         pass = findViewById(R.id.signupPasswordEditText);

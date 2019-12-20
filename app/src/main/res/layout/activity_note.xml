@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_light_disabled"
     android:orientation="vertical"
     tools:context=".Note">
 
@@ -80,7 +81,6 @@
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/common_google_signin_btn_text_light_normal_background"
                     android:text="Click here to ADD     "
                     android:textColor="#161616"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -107,7 +107,6 @@
         </LinearLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
 
 
 </LinearLayout>

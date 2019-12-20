@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setTitle("Login");
+
         user = findViewById(R.id.loginEmailEditText);
         pass = findViewById(R.id.loginpasswordEditText);
         login = findViewById(R.id.loginSubmitButton);

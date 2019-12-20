@@ -42,6 +42,7 @@ public class DocumentListsScreenActivity extends AppCompatActivity {
 
         firestore = FirebaseFirestore.getInstance();
 
+        setTitle("Upload Your Document");
 
 
         notesRecyclerView = findViewById(R.id.notesRecyclerView);
